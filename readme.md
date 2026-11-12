@@ -1,0 +1,1 @@
+code for artifical entities that follow emergence
