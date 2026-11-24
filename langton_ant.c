@@ -10,7 +10,7 @@
 #define ROWS (SCREEN_WIDTH / CELL)
 #define COLS (SCREEN_HEIGHT / CELL)
 
-#define ANT_COUNT 4
+#define ANT_COUNT 1
 
 enum Board{
     DEAD = 0,
@@ -130,9 +130,10 @@ int main(){
 
     Ant ants[ANT_COUNT];
     InitAnts(ants, ANT_COUNT);
+    ants[0].direction = UP; // testing for highway
 
     float timer = 0.0f;
-    float interval = 0.1f;
+    float interval = 0.001f; // for highway 
 
     SetTargetFPS(144);
     while (!WindowShouldClose()){
